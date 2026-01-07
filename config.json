@@ -1,0 +1,77 @@
+{
+    "audio": {
+      "sample_rate": 16000,
+      "channels": 1,
+      "chunk_duration": 0.5
+    },
+    
+    "stt": {
+      "model_size": "base",
+      "device": "cpu",
+      "compute_type": "int8",
+      "language": "en",
+      "vad_filter": true
+    },
+    
+    "wake_words": [
+      "hey computer",
+      "computer",
+      "hey assistant"
+    ],
+    
+    "llm": {
+      "provider": "ollama",
+      "model": "llama3.2:3b",
+      "api_url": "http://localhost:11434",
+      "temperature": 0.1,
+      "max_tokens": 500
+    },
+    
+    "executor": {
+      "dry_run_mode": true,
+      "require_confirmation": true,
+      "timeout_seconds": 30
+    },
+    
+    "permissions": {
+      "low_risk": {
+        "auto_execute": true,
+        "log_only": true
+      },
+      "medium_risk": {
+        "auto_execute": false,
+        "require_confirmation": true
+      },
+      "high_risk": {
+        "auto_execute": false,
+        "require_confirmation": true,
+        "require_password": false
+      }
+    },
+    
+    "apps": {
+      "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "notepad": "notepad.exe",
+      "calculator": "calc.exe",
+      "vscode": "C:\\Users\\{USERNAME}\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+      "spotify": "C:\\Users\\{USERNAME}\\AppData\\Roaming\\Spotify\\Spotify.exe"
+    },
+    
+    "paths": {
+      "downloads": "C:\\Users\\{USERNAME}\\Downloads",
+      "documents": "C:\\Users\\{USERNAME}\\Documents",
+      "desktop": "C:\\Users\\{USERNAME}\\Desktop"
+    },
+    
+    "backend": {
+      "host": "127.0.0.1",
+      "port": 8000,
+      "cors_origins": ["http://localhost:3000"]
+    },
+    
+    "logging": {
+      "level": "INFO",
+      "log_file": "logs/agent.log",
+      "audit_log": "logs/audit.log"
+    }
+  }
