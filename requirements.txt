@@ -1,0 +1,26 @@
+# Audio & STT
+faster-whisper==1.0.3
+pyaudio==0.2.14
+sounddevice==0.4.6
+numpy==1.26.4
+scipy==1.11.4
+noisereduce==3.0.0
+
+# LLM Integration (local models via Ollama or llama-cpp-python)
+ollama==0.1.6
+# OR: llama-cpp-python==0.2.20
+
+# Backend API (if using FastAPI)
+fastapi==0.109.0
+uvicorn==0.27.0
+websockets==12.0
+
+# Windows automation
+pyautogui==0.9.54
+psutil==5.9.8
+pywin32==306
+
+# Utilities
+pydantic==2.5.3
+python-dotenv==1.0.0
+loguru==0.7.2
