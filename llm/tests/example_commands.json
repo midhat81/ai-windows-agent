@@ -1,0 +1,96 @@
+{
+    "examples": [
+      {
+        "voice_input": "Open Chrome",
+        "expected_json": {
+          "intent": "open_application",
+          "steps": [
+            {
+              "action": "open_app",
+              "parameters": {
+                "app_name": "chrome"
+              }
+            }
+          ],
+          "risk_level": "low",
+          "requires_confirmation": false,
+          "explanation": "Opening Google Chrome browser"
+        }
+      },
+      {
+        "voice_input": "Create a new file called notes.txt in Documents",
+        "expected_json": {
+          "intent": "create_document",
+          "steps": [
+            {
+              "action": "create_file",
+              "parameters": {
+                "path": "C:\\Users\\{username}\\Documents\\notes.txt",
+                "content": ""
+              }
+            }
+          ],
+          "risk_level": "medium",
+          "requires_confirmation": true,
+          "explanation": "Creating empty text file in Documents folder"
+        }
+      },
+      {
+        "voice_input": "Open Chrome and search for Python tutorials",
+        "expected_json": {
+          "intent": "web_search",
+          "steps": [
+            {
+              "action": "open_app",
+              "parameters": {
+                "app_name": "chrome"
+              }
+            },
+            {
+              "action": "open_url",
+              "parameters": {
+                "url": "https://www.google.com/search?q=Python+tutorials"
+              }
+            }
+          ],
+          "risk_level": "low",
+          "requires_confirmation": false,
+          "explanation": "Opening Chrome and performing Google search"
+        }
+      },
+      {
+        "voice_input": "Delete old.txt from Downloads",
+        "expected_json": {
+          "intent": "delete_file",
+          "steps": [
+            {
+              "action": "delete_file",
+              "parameters": {
+                "path": "C:\\Users\\{username}\\Downloads\\old.txt"
+              }
+            }
+          ],
+          "risk_level": "high",
+          "requires_confirmation": true,
+          "explanation": "Deleting file from Downloads - this action cannot be undone"
+        }
+      },
+      {
+        "voice_input": "Open Notepad",
+        "expected_json": {
+          "intent": "open_application",
+          "steps": [
+            {
+              "action": "open_app",
+              "parameters": {
+                "app_name": "notepad"
+              }
+            }
+          ],
+          "risk_level": "low",
+          "requires_confirmation": false,
+          "explanation": "Opening Notepad text editor"
+        }
+      }
+    ]
+  }

@@ -24,3 +24,7 @@ pywin32==306
 pydantic==2.5.3
 python-dotenv==1.0.0
 loguru==0.7.2
+
+
+ollama>=0.1.0
+pydantic>=2.0.0
