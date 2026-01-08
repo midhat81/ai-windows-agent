@@ -3,17 +3,23 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.so
-*.egg
-*.egg-info/
-dist/
-build/
-*.whl
-
-# Virtual Environment
+.Python
 venv/
 env/
 ENV/
-.venv/
+.venv
+*.egg-info/
+.pytest_cache/
+
+# Node.js / Frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+build/
+.cache/
+*.log
 
 # IDE
 .vscode/
@@ -21,57 +27,48 @@ ENV/
 *.swp
 *.swo
 *~
-.DS_Store
-
-# Logs
-logs/
-*.log
-
-# Whisper Models (large files)
-*.pt
-*.bin
-models/
-
-# Audio files (if storing test recordings)
-*.wav
-*.mp3
-*.flac
-
-# Configuration (may contain sensitive info)
-# Uncomment if config.json has API keys
-# config.json
 
 # OS
+.DS_Store
 Thumbs.db
 desktop.ini
-
-# Frontend
-frontend/node_modules/
-frontend/dist/
-frontend/build/
-frontend/.next/
-frontend/.env.local
-
-# Testing
-.pytest_cache/
-.coverage
-htmlcov/
-
-# Jupyter Notebooks (if using)
-.ipynb_checkpoints/
 
 # Environment variables
 .env
 .env.local
-.env.*.local
+
+# Logs
+logs/
+*.log
 
 # Database
 *.db
 *.sqlite
 *.sqlite3
 
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Build artifacts
+*.exe
+*.dll
+*.so
+*.dylib
+
 # Temporary files
 *.tmp
-*.temp
-temp/
-tmp/
+*.bak
+*.swp
+~*
+
+# Frontend specific
+frontend/.vite/
+frontend/dist/
+frontend/.cache/
+
+# Backend specific
+backend/__pycache__/
+backend/*.pyc
+backend/.pytest_cache/
